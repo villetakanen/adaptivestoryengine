@@ -1,0 +1,33 @@
+{
+    "BookOne":{
+        "start":"bo_1",
+        "bo_1":{
+            "title":"first chapter from books.json", 
+            "text":"first chapter text from books.json",
+            "actions":[
+                {"target":"bo_2",
+                 "text":"Move on to second chapter"
+                }
+            ]
+        },
+        "bo_2":{
+            "title":"Second chapter", 
+            "text":"Second chaper, with road back, and to forward",
+            "actions":[
+                {"target":"bo_1",
+                 "text":"Back"
+                },
+                {"target":"a_third_chapter",
+                    "text":"To the very end"
+                }
+            ]
+        },
+        "a_third_chapter":{
+            "title":"Third chapter with no actions", 
+            "text":"Sexond chapter text",
+            "actions":[
+                
+            ]
+        }
+    }
+}
