@@ -10,8 +10,11 @@
                         <p>{{placeholder_book.chapters[cursor].text}}</p>
                     </v-card-text>
                     <v-card-actions>
-                        <v-btn @click="cursor=placeholder_book.chapters[cursor].actions[0].target">{{placeholder_book.chapters[cursor].actions[0].text}}</v-btn>
-                        <v-btn>Go right</v-btn>
+                        <v-btn 
+                            @click="cursor=action.target"
+                            v-for="action in placeholder_book.chapters[cursor].actions" v-bind:key="action.target">
+                            {{action.text}}
+                        </v-btn>
                     </v-card-actions>
                 </v-card>
             </v-flex>
@@ -29,9 +32,17 @@ export default {
                     {'title':'first chapter', 'text':'first chapter text',
                         'actions':[{'target':'1','text':'chapter 2'}]
                     },
-                    {'title':'second chapter', 'text':'second chapter text',
-                        'actions':[{'target':'0','text':'chapter 1'}]
-                        }
+                    {'title':'second chapter', 'text':'There should be 2 actions, one leading to 1, one to 3',
+                        'actions':[
+                            {'target':'0','text':'chapter 1'},
+                            {'target':'2','text':'chapter 3'}]
+                    },
+                    {'title':'Third chapter', 'text':'There should be three actions, one leading to 1, one to 2, and one doing nothing',
+                        'actions':[
+                            {'target':'0','text':'chapter 1'},
+                            {'target':'1','text':'chapter 2'},
+                            {'target':'2','text':'Stay here'}]
+                    }
                 ],
             }
         }
