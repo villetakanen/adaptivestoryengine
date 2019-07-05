@@ -1,5 +1,8 @@
 # adaptivestoryengine
 
+A Simple learning and playground project for doing interactive novels.
+
+
 ## Project setup
 ```
 npm install
