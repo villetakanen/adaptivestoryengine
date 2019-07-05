@@ -4,13 +4,13 @@
             <v-flex>
                 <v-card>
                     <v-card-title primary-title>
-                        <h1>A Chapter goes here</h1>  
+                        <h1>{{placeholder_book.chapters[cursor].title}}</h1>  
                     </v-card-title>
                     <v-card-text>
-                        <p>The Chapter text goes here</p>
+                        <p>{{placeholder_book.chapters[cursor].text}}</p>
                     </v-card-text>
                     <v-card-actions>
-                        <v-btn>Go left</v-btn>
+                        <v-btn @click="cursor=placeholder_book.chapters[cursor].actions[0].target">{{placeholder_book.chapters[cursor].actions[0].text}}</v-btn>
                         <v-btn>Go right</v-btn>
                     </v-card-actions>
                 </v-card>
@@ -20,6 +20,22 @@
 </template>
 <script>
 export default {
+    data () {
+        return {
+            cursor:0,
+            placeholder_book:{
+                'name': 'A Placeholder book',
+                'chapters':[
+                    {'title':'first chapter', 'text':'first chapter text',
+                        'actions':[{'target':'1','text':'chapter 2'}]
+                    },
+                    {'title':'second chapter', 'text':'second chapter text',
+                        'actions':[{'target':'0','text':'chapter 1'}]
+                        }
+                ],
+            }
+        }
+    }
     
 }
 </script>
