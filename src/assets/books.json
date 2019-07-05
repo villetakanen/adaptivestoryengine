@@ -1,18 +1,19 @@
 {
     "BookOne":{
         "start":"bo_1",
+        "title":"The test book for StoryBoard functionality",
         "bo_1":{
-            "title":"first chapter from books.json", 
-            "text":"first chapter text from books.json",
+            "title":"Start of the Book", 
+            "text":"The book should start from this chapter. The chapter has only one action, which enables you to move to the second chapter",
             "actions":[
                 {"target":"bo_2",
-                 "text":"Move on to second chapter"
+                 "text":"Move on to the second chapter"
                 }
             ]
         },
         "bo_2":{
-            "title":"Second chapter", 
-            "text":"Second chaper, with road back, and to forward",
+            "title":"The Second chapter", 
+            "text":"Second chaper, with road back to start, and to forward to the third chapter",
             "actions":[
                 {"target":"bo_1",
                  "text":"Back"
@@ -23,8 +24,8 @@
             ]
         },
         "a_third_chapter":{
-            "title":"Third chapter with no actions", 
-            "text":"Sexond chapter text",
+            "title":"Third chapter, with no exit", 
+            "text":"This chapter exists to test a chapter with no ways foward or back",
             "actions":[
                 
             ]
