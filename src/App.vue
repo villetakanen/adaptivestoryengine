@@ -20,7 +20,7 @@
           <v-list-tile
             v-for="(item, index) in books"
             :key="index"
-            @click=""
+            @click="currentbook=item"
           >
             <v-list-tile-title>{{ item.title }}</v-list-tile-title>
           </v-list-tile>
@@ -29,7 +29,7 @@
     </v-toolbar>
 
     <v-content>
-      <StoryBoard/>
+      <StoryBoard v-bind="currentbook"/>
     </v-content>
   </v-app>
 </template>
@@ -44,7 +44,7 @@ export default {
   },
   data () {
     return {
-      currentbook:"The Escape",
+      currentbook:{"TheEscape":{}},
       books: [{title:"The Escape"},{title:"BookOne"}]
     }
   }

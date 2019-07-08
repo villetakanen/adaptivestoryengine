@@ -4,7 +4,7 @@
             <v-flex>
                 <v-card>
                     <v-card-title primary-title>
-                        <h1>{{book[bookmark].title}}</h1>  
+                        <h1>{{bookName}} {{book[bookmark].title}}</h1>  
                     </v-card-title>
                     <v-card-text>
                         <p>{{book[bookmark].text}}</p>
@@ -40,7 +40,12 @@ export default {
     },
     components:{
         MarkdownDiv
+    },
+    props: {
+           bookName:"BookOne"
+        
     }
+    
     
 }
 </script>
