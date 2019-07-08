@@ -30,5 +30,21 @@
                 
             ]
         }
+    },
+    "The Escape":{
+        "start":"1",
+        "title":"The Escape",
+        "1":{
+            "title":"Awake?", 
+            "text":"You find yourself in a strange cell, the door is open",
+            "actions":[
+                {"target":"1",
+                    "text":"Try to sneak out of the cell"
+                },
+                {"target":"1",
+                    "text":"Wait for someone to come"
+                }
+            ]
+        }
     }
 }

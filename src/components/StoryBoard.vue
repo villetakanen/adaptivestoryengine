@@ -8,6 +8,7 @@
                     </v-card-title>
                     <v-card-text>
                         <p>{{book[bookmark].text}}</p>
+                        <MarkdownDiv :markdown="book[bookmark].text"></MarkdownDiv>
                     </v-card-text>
                     <v-card-actions>
                         <v-btn 
@@ -25,6 +26,9 @@
 
 //Temporary import for books
 import books from '../assets/books.json'
+import MarkdownDiv from './MarkdownDiv'
+
+//import VueMarkdown from 'vue-markdown'
 
 export default {
     data () {
@@ -33,6 +37,9 @@ export default {
             book:books.BookOne,
             bookmark: books.BookOne.start,    
         }
+    },
+    components:{
+        MarkdownDiv
     }
     
 }
