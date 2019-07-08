@@ -6,7 +6,26 @@
         <span class="font-weight-light"> ADAPTIVE STORY ENGINE</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      
+      <v-menu offset-y>
+        <template v-slot:activator="{ on }">
+          <v-btn
+            color="primary"
+            dark
+            v-on="on"
+          >
+            Select Book
+          </v-btn>
+        </template>
+        <v-list>
+          <v-list-tile
+            v-for="(item, index) in books"
+            :key="index"
+            @click=""
+          >
+            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
     </v-toolbar>
 
     <v-content>
@@ -25,7 +44,8 @@ export default {
   },
   data () {
     return {
-      //
+      currentbook:"The Escape",
+      books: [{title:"The Escape"},{title:"BookOne"}]
     }
   }
 }
