@@ -6,17 +6,17 @@
         <span>ASE</span>
         <span class="font-weight-light"> ADAPTIVE STORY ENGINE</span>
       </v-toolbar-title>
-      
+
       <v-spacer></v-spacer>
 
       <BookMenu/>
-      
+
     </v-toolbar>
 
     <v-content>
 
       <StoryBoard/>
-      
+
     </v-content>
   </v-app>
 </template>
