@@ -26,9 +26,10 @@
         "a_third_chapter":{
             "title":"Third chapter, with no exit", 
             "text":"This chapter exists to test a chapter with no ways foward or back",
-            "actions":[
-                
+            "notes":[
+                {"message":"The End. Choose the book again, if you want to restart"}
             ]
+
         }
     },
     "The Escape":{
@@ -38,12 +39,19 @@
             "title":"Awake?", 
             "text":"You find yourself in a strange cell, the door is open",
             "actions":[
-                {"target":"1",
+                {"target":"2",
                     "text":"Try to sneak out of the cell"
                 },
                 {"target":"1",
                     "text":"Wait for someone to come"
                 }
+            ]
+        },
+        "2":{
+            "title":"Something in the dark", 
+            "text":"Descending into the dark hallway, you feel something is alive there",
+            "notes":[
+                {"message":"There is a sharp twang of pain. The End."}
             ]
         }
     }

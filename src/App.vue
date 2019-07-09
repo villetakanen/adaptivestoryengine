@@ -1,22 +1,16 @@
 <template>
   <v-app>
     <v-toolbar app>
-
       <v-toolbar-title class="headline text-uppercase">
         <span>ASE</span>
         <span class="font-weight-light"> ADAPTIVE STORY ENGINE</span>
+        <span class="booktitle"> {{book}}</span>
       </v-toolbar-title>
-
       <v-spacer></v-spacer>
-
       <BookMenu/>
-
     </v-toolbar>
-
     <v-content>
-
       <StoryBoard/>
-
     </v-content>
   </v-app>
 </template>
@@ -31,10 +25,18 @@ export default {
     StoryBoard,
     BookMenu
   },
-  data () {
-    return {
-      //
+  computed: {
+    book () {
+      return this.$store.state.reader.books[this.$store.state.reader.title].title
     }
   }
 }
 </script>
+<style scoped>
+.booktitle{
+  font-weight: 300;
+  font-size: 0.80em;
+  margin-left: 2em;
+}
+</style>
+

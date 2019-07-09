@@ -4,8 +4,8 @@ import bookdata from '../../assets/books.json'
 // bookmark: reference to current book chapter
 // title: reference to current book
 const state = {
-  bookmark: 'bo_1',
-  title: 'BookOne',
+  bookmark: '1',
+  title: 'The Escape',
   books: bookdata
 }
 const mutations = {

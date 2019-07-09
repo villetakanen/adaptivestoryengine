@@ -15,6 +15,9 @@
                             v-for="action in book[bookmark].actions" v-bind:key="action.target">
                             {{action.text}}
                         </v-btn>
+                        <template v-for="(note, index) in book[bookmark].notes">
+                          <p v-bind:key="index">{{note.message}}</p>
+                        </template>
                     </v-card-actions>
                 </v-card>
             </v-flex>
