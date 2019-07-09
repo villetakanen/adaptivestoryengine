@@ -28,12 +28,18 @@
 
 // import VueMarkdown from 'vue-markdown'
 
+// Temporary import of raw bookdata
+//
+// In the end, this should come from server - and should be pushed to this component via vuex state.
+//
+import bookdata from '../assets/books.json'
+
 export default {
   data () {
     return {
       cursor: 0,
-      book: this.$store.state.books.BookOne,
-      bookmark: this.$store.state.books.BookOne.start
+      book: bookdata.BookOne,
+      bookmark: bookdata.BookOne.start
     }
   },
   components: {
