@@ -1,12 +1,15 @@
 import Vue from 'vue'
-import Vuex from 'vuex'
 import './plugins/vuetify'
 import App from './App.vue'
+import store from './store/index'
+// import bookData from './assets/books.json'
 
 Vue.config.productionTip = false
 
-Vue.use(Vuex)
+// Vue.use(Vuex)
 
 new Vue({
-  render: h => h(App),
+  el: '#app',
+  store,
+  render: h => h(App)
 }).$mount('#app')

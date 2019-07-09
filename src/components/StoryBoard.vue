@@ -4,11 +4,11 @@
             <v-flex>
                 <v-card>
                     <v-card-title primary-title>
-                        <h1>{{bookName}} {{book[bookmark].title}}</h1>  
+                        <h1>{{books.BookOne[bookmark].title}}</h1>  
                     </v-card-title>
                     <v-card-text>
                         <p>{{book[bookmark].text}}</p>
-                        <MarkdownDiv :markdown="book[bookmark].text"></MarkdownDiv>
+                        
                     </v-card-text>
                     <v-card-actions>
                         <v-btn 
@@ -24,9 +24,8 @@
 </template>
 <script>
 
-//Temporary import for books
-import books from '../assets/books.json'
-import MarkdownDiv from './MarkdownDiv'
+//import MarkdownDiv from './MarkdownDiv'
+//<MarkdownDiv :markdown="book[bookmark].text"></MarkdownDiv>
 
 //import VueMarkdown from 'vue-markdown'
 
@@ -34,19 +33,13 @@ export default {
     data () {
         return {
             cursor:0,
-            book:books.BookOne,
-            bookmark: books.BookOne.start,    
+            book:this.$store.state.books.BookOne,
+            bookmark: this.$store.state.books.BookOne.start,    
         }
     },
     components:{
-        MarkdownDiv
-    },
-    props: {
-           bookName:"BookOne"
-        
-    }
-    
-    
+        //MarkdownDiv
+    },    
 }
 </script>
 <style scoped>
