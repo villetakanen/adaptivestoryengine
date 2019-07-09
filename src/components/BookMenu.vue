@@ -14,7 +14,7 @@
                 <v-list-tile
                     v-for="(item, index) in this.books"
                     :key="index"
-                    @click="currentbook=item"
+                    @click="changeTitle(index)"
                 >
                     <v-list-tile-title>{{ item.title }}</v-list-tile-title>
                 </v-list-tile>
@@ -27,7 +27,13 @@
 export default {
   data () {
     return {
-      books: this.$store.state.reader.books
+      books: this.$store.state.reader.books,
+      reader: this.$store.state.reader
+    }
+  },
+  methods: {
+    changeTitle: function (title) {
+      this.$store.commit('reader/changeToTitle', title)
     }
   }
 }

@@ -11,7 +11,7 @@
                     </v-card-text>
                     <v-card-actions>
                         <v-btn
-                            @click="bookmark=action.target"
+                            @click="moveTo(action.target)"
                             v-for="action in book[bookmark].actions" v-bind:key="action.target">
                             {{action.text}}
                         </v-btn>
@@ -26,13 +26,21 @@
 export default {
   data () {
     return {
-      cursor: 0,
-      book: this.$store.state.reader.books.BookOne,
-      bookmark: this.$store.state.reader.books.BookOne.start
+      cursor: 0
     }
   },
-  components: {
-    // MarkdownDiv
+  computed: {
+    book () {
+      return this.$store.state.reader.books[this.$store.state.reader.title]
+    },
+    bookmark () {
+      return this.$store.state.reader.bookmark
+    }
+  },
+  methods: {
+    moveTo: function (chapter) {
+      this.$store.commit('reader/moveToChapter', chapter)
+    }
   }
 }
 </script>
