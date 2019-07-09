@@ -23,23 +23,12 @@
 </template>
 <script>
 
-// import MarkdownDiv from './MarkdownDiv'
-// <MarkdownDiv :markdown="book[bookmark].text"></MarkdownDiv>
-
-// import VueMarkdown from 'vue-markdown'
-
-// Temporary import of raw bookdata
-//
-// In the end, this should come from server - and should be pushed to this component via vuex state.
-//
-import bookdata from '../assets/books.json'
-
 export default {
   data () {
     return {
       cursor: 0,
-      book: bookdata.BookOne,
-      bookmark: bookdata.BookOne.start
+      book: this.$store.state.reader.books.BookOne,
+      bookmark: this.$store.state.reader.books.BookOne.start
     }
   },
   components: {

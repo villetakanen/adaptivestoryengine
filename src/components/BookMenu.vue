@@ -24,16 +24,10 @@
 </template>
 <script>
 
-// Temporary import of raw bookdata
-//
-// In the end, this should come from server - and should be pushed to this component via vuex state.
-//
-import bookdata from '../assets/books.json'
-
 export default {
   data () {
     return {
-      books: bookdata
+      books: this.$store.state.reader.books
     }
   }
 }
