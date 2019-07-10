@@ -2,11 +2,12 @@
 
 A Simple learning and playground project for doing interactive novels.
 
-A live demo can be seen in firebase: 
+A live demo can be seen in firebase:
 <https://adaptivestoryengine.firebaseapp.com/>
 
 The App takes in a list of Books in the format of
-```
+
+```json
  "BookOne":{
         "start":"bo_1",
         "title":"The test book for StoryBoard functionality",
@@ -20,33 +21,39 @@ The App takes in a list of Books in the format of
             ]
         },...
 ```
+
 The actions can be used for page turning, or for coose-your-own-story style texts.
 
-
 ## Project setup
-```
+
+```bash
 npm install
 ```
 
 ### Compiles and hot-reloads for development
-```
+
+```bash
 npm run serve
 ```
 
 ### Compiles and minifies for production
-```
+
+```bash
 npm run build
 ```
 
 ### Run your tests
-```
+
+```bash
 npm run test
 ```
 
 ### Lints and fixes files
-```
+
+```bash
 npm run lint
 ```
 
 ### Customize configuration
+
 See [Configuration Reference](https://cli.vuejs.org/config/).
