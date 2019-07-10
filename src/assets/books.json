@@ -42,7 +42,7 @@
                 {"target":"2",
                     "text":"Try to sneak out of the cell"
                 },
-                {"target":"1",
+                {"target":"3",
                     "text":"Wait for someone to come"
                 }
             ]
@@ -50,9 +50,23 @@
         "2":{
             "title":"Something in the dark", 
             "text":"Descending into the dark hallway, you feel something is alive there",
+            "actions":[
+                {"target":"1",
+                    "text":"Restart the book",
+                    "style":"error"
+                }],
             "notes":[
                 {"message":"There is a sharp twang of pain. The End."}
             ]
+        },
+        "3":{
+            "title":"It moves in the hallway", 
+            "text":"You hear a scary sound down the hallway. Good thing you waited, but maybe it is time you run before it finds you here?",
+            "actions":[
+                {"target":"1",
+                    "text":"Wait for a bit more..."
+                }]
         }
+        
     }
 }

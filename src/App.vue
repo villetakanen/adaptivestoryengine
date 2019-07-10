@@ -39,4 +39,3 @@ export default {
   margin-left: 2em;
 }
 </style>
-

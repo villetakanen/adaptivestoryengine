@@ -10,14 +10,17 @@
                         <p>{{book[bookmark].text}}</p>
                     </v-card-text>
                     <v-card-actions>
-                        <v-btn
-                            @click="moveTo(action.target)"
-                            v-for="action in book[bookmark].actions" v-bind:key="action.target">
-                            {{action.text}}
-                        </v-btn>
-                        <template v-for="(note, index) in book[bookmark].notes">
-                          <p v-bind:key="index">{{note.message}}</p>
-                        </template>
+                        <div>
+                          <template v-for="(note, index) in book[bookmark].notes">
+                            <p v-bind:key="index">{{note.message}}</p>
+                          </template>
+                          <v-btn
+                              :color="action.style"
+                              @click="moveTo(action.target)"
+                              v-for="action in book[bookmark].actions" v-bind:key="action.target">
+                              {{action.text}}
+                          </v-btn>
+                        </div>
                     </v-card-actions>
                 </v-card>
             </v-flex>
