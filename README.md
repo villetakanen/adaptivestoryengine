@@ -2,6 +2,9 @@
 
 A Simple learning and playground project for doing interactive novels.
 
+A live demo can be seen in firebase: 
+<https://adaptivestoryengine.firebaseapp.com/>
+
 The App takes in a list of Books in the format of
 ```
  "BookOne":{
