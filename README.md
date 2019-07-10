@@ -19,7 +19,7 @@ The App takes in a list of Books in the format of
                  "text":"Move on to the second chapter"
                 }
             ]
-        },...
+        },
 ```
 
 The actions can be used for page turning, or for coose-your-own-story style texts.

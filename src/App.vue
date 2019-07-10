@@ -8,6 +8,7 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <BookMenu/>
+      <Profile/>
     </v-toolbar>
     <v-content>
       <StoryBoard/>
@@ -18,12 +19,14 @@
 <script>
 import StoryBoard from './components/StoryBoard'
 import BookMenu from './components/BookMenu'
+import Profile from './components/Profile'
 
 export default {
   name: 'App',
   components: {
     StoryBoard,
-    BookMenu
+    BookMenu,
+    Profile
   },
   data () {
     return {
