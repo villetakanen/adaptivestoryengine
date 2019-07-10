@@ -3,7 +3,7 @@
     <v-toolbar app>
       <v-toolbar-title class="headline text-uppercase">
         <span>ASE</span>
-        <span class="font-weight-light"> ADAPTIVE STORY ENGINE</span>
+        <span class="font-weight-light"> {{title}}</span>
         <span class="booktitle"> {{book}}</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
@@ -24,6 +24,11 @@ export default {
   components: {
     StoryBoard,
     BookMenu
+  },
+  data () {
+    return {
+      title: process.env.VUE_APP_TITLE
+    }
   },
   computed: {
     book () {

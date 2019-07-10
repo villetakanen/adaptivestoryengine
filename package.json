@@ -16,9 +16,11 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue-libs": "^4.0.0",
+    "firebase": "^6.2.4",
     "showdown": "^1.9.0",
     "vue": "^2.6.10",
     "vue-markdown": "^2.2.4",
+    "vue-router": "^3.0.7",
     "vuetify": "^1.5.5",
     "vuex": "^3.1.1"
   },
