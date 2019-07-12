@@ -1,22 +1,17 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Router from 'vue-router'
+import StoryBoard from './components/StoryBoard'
+import LoginForm from './components/LoginForm'
 
-const Foo = { template: '<div>foo</div>' }
-const Bar = { template: '<div>bar</div>' }
+Vue.use(Router)
 
 const routes = [
-  { path: '/login', component: Foo },
-  { path: '/bar', component: Bar }
+  { path: '/', component: StoryBoard },
+  { path: '/login', component: LoginForm }
 ]
 
-const router = new VueRouter({
+const router = new Router({
   routes // short for `routes: routes`
 })
 
-Vue.use(VueRouter)
-
-export default new VueRouter({
-  modules: {
-    router
-  }
-})
+export default router

@@ -1,9 +1,7 @@
 <template>
   <v-btn
-    color="primary"
-    dark
-    v-on="off"
-                >
+    color="secondary"
+    to="/login">
     Login
     </v-btn>
 </template>
