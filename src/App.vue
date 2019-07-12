@@ -8,7 +8,7 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <BookMenu/>
-      
+
     </v-toolbar>
     <v-content>
       <StoryBoard/>
