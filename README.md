@@ -30,17 +30,6 @@ The actions can be used for page turning, or for coose-your-own-story style text
 npm install
 ```
 
-Create a env.development.local file with values for
-
-```conf
-VUE_APP_FIREBASE_API_KEY = ''
-VUE_APP_FIREBASE_AUTH_DOMAIN = ''
-VUE_APP_FIREBASE_DATASE_URL = ''
-VUE_APP_FIREBASE_PROJECT_ID = ''
-VUE_APP_FIREBASE_STORAGE_BUCKET = ''
-VUE_APP_FIREBASE_MESSAGE_SENDER_ID = ''
-```
-
 ### Compiles and hot-reloads for development
 
 ```bash
