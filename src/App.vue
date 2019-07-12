@@ -8,11 +8,12 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <BookMenu/>
-      <Profile/>
+      
     </v-toolbar>
     <v-content>
       <StoryBoard/>
     </v-content>
+    <Profile/>
   </v-app>
 </template>
 
