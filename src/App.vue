@@ -2,7 +2,7 @@
   <v-app>
     <v-toolbar app>
       <v-toolbar-title class="headline text-uppercase">
-        <span>ASE</span>
+        <router-link to="/"><span>ASE</span></router-link>
         <span class="font-weight-light"> {{title}}</span>
         <span class="booktitle"> {{book}}</span>
       </v-toolbar-title>
