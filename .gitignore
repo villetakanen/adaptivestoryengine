@@ -8,9 +8,12 @@ firebase.json
 .firebase/*
 public/
 
-# local env files
+# Local env files
 .env.local
 .env.*.local
+
+# Production env
+.env.production
 
 # Log files
 npm-debug.log*
