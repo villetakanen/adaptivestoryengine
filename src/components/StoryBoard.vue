@@ -31,11 +31,6 @@
 <script>
 
 export default {
-  data () {
-    return {
-      cursor: 0
-    }
-  },
   computed: {
     book () {
       return this.$store.state.reader.books[this.$store.state.reader.title]

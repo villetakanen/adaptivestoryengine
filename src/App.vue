@@ -2,7 +2,7 @@
   <v-app>
     <v-toolbar app>
       <v-toolbar-title class="headline text-uppercase">
-        <router-link to="/"><span>ASE</span></router-link>
+        <router-link to="/" class="toplink"><span>ASE</span></router-link>
         <span class="font-weight-light"> {{title}}</span>
         <span class="booktitle"> {{book}}</span>
       </v-toolbar-title>
@@ -54,5 +54,9 @@ export default {
   font-weight: 300;
   font-size: 0.80em;
   margin-left: 2em;
+}
+.toplink{
+  text-decoration: none;
+  color:#2196f3;
 }
 </style>

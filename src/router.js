@@ -3,11 +3,13 @@ import Router from 'vue-router'
 import StoryBoard from './components/StoryBoard'
 import LoginForm from './components/LoginForm'
 import ProfileCard from './components/ProfileCard'
+import HelloCard from './components/HelloCard'
 
 Vue.use(Router)
 
 const routes = [
-  { path: '/', component: StoryBoard },
+  { path: '/', component: HelloCard },
+  { path: '/reader', component: StoryBoard },
   { path: '/login', component: LoginForm },
   { path: '/profile', component: ProfileCard }
 ]
