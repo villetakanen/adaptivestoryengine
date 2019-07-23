@@ -27,7 +27,7 @@ new Vue({
     // Register an observer to update Vuex state on login changes
     firebase.auth().onAuthStateChanged(function (user) {
       if (user) {
-        store.commit('user/setActiveUser', user.displayName)
+        store.commit('user/setActiveUser', user)
         console.log('username ' + user.displayName)
       } else {
         // No user is signed in.

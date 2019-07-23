@@ -3,15 +3,19 @@
         <v-layout>
             <v-flex>
                 <v-card>
-                    <v-card-title primary-title>Profile for {{displayname}}
+                    <v-card-title primary-title>Profile for {{user.name}}
                         <v-btn
-                            v-if="displayname"
+                            v-if="user"
                             color="secondary"
                             @click="logout">
                             logout
                             </v-btn>
                     </v-card-title>
                      <v-card-text>
+                        <h1>Profile</h1>
+                        <table>
+                            <tr><td>User id</td><td>{{user.username}}</td></tr>
+                        </table>
                         <h1>My library</h1>
                         <v-list>
                             <v-list-tile
@@ -23,6 +27,14 @@
                             </v-list-tile>
                         </v-list>
                         <h1>My creations</h1>
+                        <v-list>
+                            <v-list-tile
+                                v-for="(item, index) in this.creatorBooks"
+                                :key="index"
+                            >
+                                <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+                            </v-list-tile>
+                        </v-list>
                     </v-card-text>
                 </v-card>
             </v-flex>
@@ -34,11 +46,14 @@ import firebase from 'firebase'
 
 export default {
   computed: {
-    displayname () {
-      return this.$store.state.user.name
+    user () {
+      return this.$store.state.user
     },
     books () {
       return this.$store.state.reader.books
+    },
+    creatorBooks () {
+      return this.$store.state.creator.books
     }
   },
   methods: {

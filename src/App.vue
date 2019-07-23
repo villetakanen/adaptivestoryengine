@@ -36,11 +36,15 @@ export default {
   computed: {
     book () {
       return this.$store.state.reader.books[this.$store.state.reader.title].title
+    },
+    username () {
+      return this.$store.user.username
     }
   },
   methods: {
     loadBooks () {
       this.$store.dispatch('reader/getFBBooks')
+      this.$store.dispatch('creator/getBooks', this.$store.state.user.username)
     }
   }
 }
