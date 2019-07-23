@@ -41,6 +41,7 @@ export default {
       }).catch(function (error) {
         console.log(error.message)
       })
+      this.$store.dispatch('reader/getFBBooks')
     }
   }
 }

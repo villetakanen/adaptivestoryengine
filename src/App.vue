@@ -7,6 +7,8 @@
         <span class="booktitle"> {{book}}</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
+      <v-btn @click="loadBooks"
+      >Load Books</v-btn>
       <BookMenu/>
       <Profile/>
     </v-toolbar>
@@ -34,6 +36,11 @@ export default {
   computed: {
     book () {
       return this.$store.state.reader.books[this.$store.state.reader.title].title
+    }
+  },
+  methods: {
+    loadBooks () {
+      this.$store.dispatch('reader/getFBBooks')
     }
   }
 }
