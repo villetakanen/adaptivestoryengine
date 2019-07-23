@@ -5,6 +5,7 @@
         "bo_1":{
             "title":"Start of the Book", 
             "text":"The book should start from this chapter. The chapter has only one action, which enables you to move to the second chapter",
+            "markdown":"# this is some markdown \nAnd some text \n## AND a head 2",
             "actions":[
                 {"target":"bo_2",
                  "text":"Move on to the second chapter"

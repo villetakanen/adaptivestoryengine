@@ -8,6 +8,7 @@
                     </v-card-title>
                     <v-card-text>
                         <p>{{book[bookmark].text}}</p>
+                        <div v-html="markdown"></div>
                     </v-card-text>
                     <v-card-actions>
                         <div>
@@ -41,6 +42,16 @@ export default {
     },
     bookmark () {
       return this.$store.state.reader.bookmark
+    },
+    markdown () {
+      var mdt = this.$store.state.reader.books[this.$store.state.reader.title][this.$store.state.reader.bookmark]
+      if (mdt.hasOwnProperty('markdown')) {
+        var md = window.markdownit()
+        const r = md.render(mdt.markdown)
+        // console.log(r)
+        return r
+      }
+      return null
     }
   },
   methods: {
