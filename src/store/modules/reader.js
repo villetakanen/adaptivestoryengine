@@ -1,6 +1,8 @@
 // Import mock data for server side books
 import bookdata from '../../assets/books.json'
+// The actual books reside in a firebase store
 import firebase from 'firebase'
+import Vue from 'vue'
 
 // bookmark: reference to current book chapter
 // title: reference to current book
@@ -27,11 +29,11 @@ const mutations = {
       console.log('tried to move to' + n)
     }
   },
-  updateBooks (state, n) {
+  updateBook (state, n) {
     if (n && n.title && n.start) {
-      state.title = n[0].title
-      state.bookmark = n[0].start
-      state.books = n
+      Vue.set(state.books, n.title, n)
+      // const test = JSON.stringify(state.books)
+      // console.log(test)
     }
   }
 }
@@ -41,8 +43,8 @@ const actions = {
     // var user = firebase.auth().currentUser
     db.collection('books').get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
-        console.log(doc.data())
-        context.commit('updateBooks', doc.data())
+        // console.log(doc.data())
+        context.commit('updateBook', doc.data())
       })
     })
   }

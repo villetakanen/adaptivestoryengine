@@ -25,10 +25,9 @@
 <script>
 
 export default {
-  data () {
-    return {
-      books: this.$store.state.reader.books,
-      reader: this.$store.state.reader
+  computed: {
+    books () {
+      return this.$store.state.reader.books
     }
   },
   methods: {
