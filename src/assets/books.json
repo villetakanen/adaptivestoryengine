@@ -9,7 +9,15 @@
             "actions":[
                 {"target":"bo_2",
                  "text":"Move on to the second chapter"
+                },
+                {"target":"bo_1",
+                    "text":"Stay here",
+                    "style":"error"
                 }
+            ],
+            "notes":[
+                {"message":"An example message here"},
+                {"message":"A second example message here"}
             ]
         },
         "bo_2":{

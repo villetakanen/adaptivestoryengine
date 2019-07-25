@@ -33,6 +33,7 @@ export default {
   methods: {
     changeTitle: function (title) {
       this.$store.commit('reader/changeToTitle', title)
+      this.$router.push('/')
     }
   }
 }
